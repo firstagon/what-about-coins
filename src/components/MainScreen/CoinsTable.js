@@ -28,13 +28,10 @@ const CoinsTable = (props) => {
           </tr>
         </thead>
         <tbody>
-          (
-          {coins.length > 0 &&
-            coins.map((coin) => {
-              console.log(coin);
-              return <TableRow values={coin} />;
-            })}
-          )
+          {coins.map((coin) => {
+            // console.log(coin);
+            return <TableRow key={coin.rating} coin={coin} rub={props.rub}/>;
+          })}
         </tbody>
       </table>
     </Fragment>

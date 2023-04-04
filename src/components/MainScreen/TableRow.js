@@ -1,15 +1,29 @@
+import { memo } from "react";
+
 const TableRow = (props) => {
-  console.log(props);
+  // console.log(props);
 
-    let priceRUB = (+props.values.priceUSD * 77).toFixed(2);
-    return (
-      <tr>
-        <td>{props.values.rating}</td>
-        <td>{props.values.name}</td>
-        <td>{props.values.priceUSD}</td>
-        <td>{priceRUB}</td>
-      </tr>
-    );
-  };
+  let price = +props.coin.priceUSD;
 
-export default TableRow;
+  function numberWithSpaces(x) {
+    return x
+      .toFixed(2)
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+  let spacedUSD = numberWithSpaces(price);
+
+  let priceRUB = (price * props.rub).toFixed(2);
+  let spacedRUB = numberWithSpaces(+priceRUB);
+
+  return (
+    <tr>
+      <td>{props.coin.rating}</td>
+      <td >{props.coin.name}</td>
+      <td>{spacedUSD} $</td>
+      <td>{spacedRUB} P</td>
+    </tr>
+  );
+};
+
+export default memo(TableRow);

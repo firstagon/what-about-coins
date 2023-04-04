@@ -33,6 +33,7 @@ const TrackerSection = (props) => {
     <section className={styles.trackSection}>
       <div> Tracker section </div>
       <CoinsTable coins={coinsValues} rub={rubVal} />
+      <marquee direction="right"> moving text </marquee>
     </section>
   );
 };

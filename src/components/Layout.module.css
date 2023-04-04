@@ -1,0 +1,82 @@
+:root {
+  --main-dark: #191c1f;
+  --main-dark-lighter: #343a40;
+  --blue: #007bff;
+  --blue-lighter: #0182ff;
+  --darkblue: #061431;
+  --main-white: #fafcff;
+  --light-grey: #f8f9fa;
+  --green: #28a745;
+  --red: #dc3545;
+  --secondary-grey: #6c757d;
+  --yellow: #ffc107;
+  --orange: #fd7e14;
+  --pink: #e83e8c;
+  --purple: #6f42c1;
+  --indigo: #6610f2;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+
+  min-height: 5vh;
+
+  background-color: var(--main-dark);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+a {
+  display: flex;
+  padding-right: 10px;
+
+  color: var(--blue);
+
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--yellow)
+}
+
+a:first-child {
+  padding-left: 5px;
+}
+
+/* a:visited {
+    color: var(--blue);
+} */
+
+a.active {
+  font-size: large;
+  color: var(--yellow);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  height: auto;
+
+  color: white;
+
+  background-color: var(--darkblue);
+}
+
+footer {
+  display: flex;
+  align-self: flex-end;
+
+  color: white;
+  background-color: var(--darkblue);
+}
+
+.white {
+  background-color: azure;
+}

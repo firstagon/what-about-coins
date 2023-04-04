@@ -1,0 +1,21 @@
+.table{
+    table-layout: fixed;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    border-collapse: collapse;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr td {
+    border: 1px solid black; 
+    border-radius: 5px;
+
+    padding: 8px;
+}
+

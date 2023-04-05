@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import styles from "./Layout.module.css";
+import FooterSection from '../components/MainScreen/FooterSection';
 
 const activeLink = ({isActive}) => isActive ? styles.active : '';
 
@@ -17,7 +18,7 @@ const Layout = () => {
       <section className={styles.main}>
         <Outlet />
       </section>
-      <footer> 2023 </footer>
+      <footer> <FooterSection /> </footer>
     </React.Fragment>
   );
 };

@@ -11,12 +11,12 @@ const options = {
 };
 
 const fetchCoin = async (typeOfCoin) => {
-  if (!typeOfCoin) {
-    console.log("need to setup the coin");
-    return;
-  }
+  // if (!typeOfCoin) {
+  //   console.log("need to setup the coin");
+  //   return;
+  // }
 
-  let data = await fetch(`https://api.coincap.io/v2/assets/${typeOfCoin}`, options)
+  let data = await fetch(`https://api.coincap.io/v2/assets/`, options)
     // .then((response) => console.log(response.body))
     .then((res) => {
       const reader = res.body.getReader();

@@ -1,4 +1,4 @@
-import { Fragment, memo, useEffect, useMemo, useState } from "react";
+import { Fragment, useMemo, useEffect, useState, memo } from "react";
 import styles from "./CoinsTable.module.css";
 import getRUB from "../../libs/exchangeRates";
 import { getCoin } from "../../libs/getCoins";
@@ -18,7 +18,7 @@ const CoinsTable = (props) => {
 
   return (
     <Fragment>
-      <table className={styles.table}>
+      <table rules="rows" className={styles.table}>
         <thead>
           <tr>
             <td> Rating </td>
@@ -30,7 +30,7 @@ const CoinsTable = (props) => {
         <tbody>
           {coins.map((coin) => {
             // console.log(coin);
-            return <TableRow key={coin.rating} coin={coin} rub={props.rub}/>;
+            return <TableRow key={coin.rating} coin={coin} rub={props.rub} />;
           })}
         </tbody>
       </table>
@@ -38,4 +38,4 @@ const CoinsTable = (props) => {
   );
 };
 
-export default memo(CoinsTable);
+export default CoinsTable;

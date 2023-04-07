@@ -1,8 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
 
+.textArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
 .welcome {
   font-family: "Nabla";
   font-size: 5em;
 
   margin: 0;
+}
+
+.coinImageLeft,
+.coinImageRight {
+  position: relative;
+
+  height: 5em;
+
+  animation: 2s infinite alternate-reverse move;
+}
+
+.coinImageLeft {
+  /* top: 0; */
+  left: 5%;
+}
+
+.coinImageRight {
+  right: 5%;
+}
+
+@keyframes move {
+  0% {
+    top: -20%;
+  }
+
+  100% {
+    top: -5%;
+  }
 }

@@ -1,0 +1,48 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: row;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textRegular,
+.textHeader {
+  text-align: center;
+
+  font-size: larger;
+
+  margin: 0;
+  padding: 0;
+}
+
+.textLiink {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+  color: var(--yellow);
+
+  margin: 0;
+  padding: 0;
+}
+
+.textLiink:hover {
+  color: var(--darkblue);
+}
+
+.textImage {
+    display: block;
+    width: 25px;
+}

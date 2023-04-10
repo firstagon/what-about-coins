@@ -19,10 +19,11 @@
 header {
   display: flex;
   flex-direction: row;
+  position: sticky;
 
   min-height: 5vh;
 
-  background-color: var(--main-dark);
+  background-color: var(--darkblue);
 }
 
 .nav {
@@ -67,7 +68,7 @@ a.active {
   color: white;
 
   /* background-color: var(--darkblue); */
-  background: linear-gradient(0deg, var(--blue), var(--main-dark) 50%);
+  background: linear-gradient(180deg, var(--darkblue), black 35%);
 }
 
 footer {

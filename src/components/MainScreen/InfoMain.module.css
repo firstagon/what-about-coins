@@ -8,13 +8,20 @@
 .infoSection {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .infoBlock {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
+  width: 45%;
+
+  background-color: var(--darkblue);
+
+  border-radius: 1em;
 }
 
 .textRegular,
@@ -24,7 +31,7 @@
   font-size: larger;
 
   margin: 0;
-  padding: 0;
+  padding: 8px;
 }
 
 .textLiink {

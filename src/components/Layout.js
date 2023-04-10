@@ -5,7 +5,9 @@ import FooterSection from '../components/MainScreen/FooterSection';
 
 const activeLink = ({isActive}) => isActive ? styles.active : '';
 
+
 const Layout = () => {
+
   return (
     <React.Fragment>
       <header>

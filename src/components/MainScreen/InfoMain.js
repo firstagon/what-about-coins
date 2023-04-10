@@ -13,8 +13,7 @@ const InfoMain = () => {
               <Link to="https://docs.coincap.io/" target="_blank" className={styles.textLiink}>
                 <img className={styles.textImage} src="https://documenter-assets.pstmn.io/favicon.ico" alt="coincap logo" /> &nbsp; CoinCap API 2.0
               </Link>
-              — это полезный инструмент для ценообразования и рыночной активности в режиме реального времени для более
-              чем 1000 криптовалют. Собирая биржевые данные с тысяч рынков, мы можем предложить прозрачные и точные
+              биржевые данные с тысяч рынков, мы можем предложить прозрачные и точные
               данные о цене и доступности активов.
             </p>
           </div>
@@ -22,7 +21,7 @@ const InfoMain = () => {
           <div className={styles.infoBlock}>
             <h4 className={styles.textHeader}> Как присваивают ранк? </h4>
             <p className={styles.textRegular}>
-              ранг находится в порядке возрастания - это число напрямую связано с рыночной капитализацией, тогда как
+              ранг находится в порядке возрастания - это число напрямую связано с рыночной капитализацией, 
               самая высокая рыночная капитализация получает ранг 1
             </p>
           </div>

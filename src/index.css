@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: visible;
+  overflow: scroll;
 }
 
 body::-webkit-scrollbar {
@@ -16,4 +16,8 @@ body::-webkit-scrollbar {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  overflow: scroll;
 }

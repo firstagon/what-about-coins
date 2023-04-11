@@ -34,22 +34,29 @@
   padding: 8px;
 }
 
-.textLiink {
+.textLink {
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  
+
+
   color: var(--yellow);
 
   margin: 0;
   padding: 0;
 }
 
-.textLiink:hover {
+.textLink:hover, .apiText:hover {
   color: var(--darkblue);
 }
+
 
 .textImage {
     display: block;
     width: 25px;
+}
+
+.apiText {
+  color: rgba(34,211,238);
 }

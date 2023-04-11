@@ -21,6 +21,9 @@ header {
   flex-direction: row;
   position: sticky;
 
+  top: 0;
+
+  width: 100%;
   min-height: 5vh;
 
   background-color: var(--darkblue);
@@ -34,7 +37,7 @@ header {
   color: white;
 }
 
-a {
+.link {
   display: flex;
   padding-right: 10px;
 
@@ -43,19 +46,15 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+.link:hover {
   color: var(--yellow)
 }
 
-a:first-child {
+.link:first-child {
   padding-left: 5px;
 }
 
-/* a:visited {
-    color: var(--blue);
-} */
-
-a.active {
+.active {
   font-size: large;
   color: var(--yellow);
 }
@@ -81,4 +80,8 @@ footer {
 
 .white {
   background-color: azure;
+}
+
+.blackHeader {
+  background-color: black;
 }

@@ -1,13 +1,17 @@
 .table {
   table-layout: fixed;
+
   width: 80%;
+  max-width: 1200px;
+  
   margin: 0;
   padding: 0;
 
   /* border-top: 1px solid #007bff; */
   /* border-radius: 5px; */
   /* border-collapse: collapse; */
-  border-color: #007bff;
+  border-bottom: 1px solid #007bff;
+  /* border-color: #007bff; */
 
   font-size: 1.5rem;
   text-align: center;
@@ -29,16 +33,22 @@ thead {
 
 thead tr td {
   background-color: #0182ff;
+  background-color: var(--blue);
+  border-bottom-color: var(--main-dark);
+}
+
+tr:hover {
+  background-color: var(--darkblue);
 }
 
 thead tr td:first-child {
-  background-color: #0182ff;
-  border-top-left-radius: 5px;
+  /* background-color: #0182ff; */
+  border-top-left-radius: 1em;
 }
 
 thead tr td:last-child {
-  background-color: #0182ff;
-  border-top-right-radius: 5px;
+  /* background-color: #0182ff; */
+  border-top-right-radius: 1em;
 }
 
 td {

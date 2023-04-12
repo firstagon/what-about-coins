@@ -9,7 +9,7 @@ const WelcomeBlock = () => {
       <div className={styles.textArea}>
         <img className={styles.coinImageLeft} src={bitcoinImage} alt="bitcoin coin" />
         <div className={styles.textContainer}>
-          <p className={styles.welcome}> What about coins </p>
+          <h4 className={styles.welcome}> What about coins </h4>
           <p> Самый наипростейший трекер различных криптовалют. </p>
         </div>
         <img className={styles.coinImageRight} src={etheriumImage} alt="bitcoin coin" />

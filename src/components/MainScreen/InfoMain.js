@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 const InfoMain = () => {
   return (
     <Fragment>
-      <section className={styles.mainCointainer}>
+      <section className={styles.mainContainer}>
+        <h6 className={styles.blockName}> Used API </h6>
         <div className={styles.infoSection}>
           <div className={styles.infoBlock}>
             <h4 className={styles.textHeader}> Откуда данные? </h4>
-            <p className={styles.textRegular}>
+            <div className={styles.textRegular}>
               <Link to="https://docs.coincap.io/" target="_blank" className={styles.textLink}>
                 <img
                   className={styles.textImage}
@@ -18,20 +19,23 @@ const InfoMain = () => {
                 />
                 &nbsp; CoinCap API 2.0
               </Link>
-              биржевые данные с тысяч рынков, мы можем предложить прозрачные и точные данные о цене и доступности
-              активов.
-            </p>
+              <p>
+                биржевые данные с тысяч рынков, мы можем предложить прозрачные и точные данные о цене и доступности
+                активов.
+              </p>
+            </div>
           </div>
 
           <div className={styles.infoBlock}>
             <h4 className={styles.textHeader}> Почем рубль? </h4>
-            <p className={styles.textRegular}>
+            <div className={styles.textRegular}>
               <Link to="https://freecurrencyapi.com" target="_blank" className={styles.textLink}>
-                <p className={styles.textLink}>Freecurrency<span className={styles.apiText}>API</span></p>
+                <p className={styles.textLink}>
+                  Freecurrency<span className={styles.apiText}>API</span>
+                </p>
               </Link>
-              The 100% free solution for handling exchange rate conversions. Our currency API provides live & historical
-              exchange rate data ranging from 1999 until today.
-            </p>
+              <p>Our currency API provides live & historical exchange rate data ranging from 1999 until today.</p>
+            </div>
           </div>
         </div>
       </section>

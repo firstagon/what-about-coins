@@ -1,10 +1,17 @@
 import React, { Fragment } from "react";
-import styles from './FooterSection.module.css';
+import { Link } from "react-router-dom";
+import styles from "./FooterSection.module.css";
 
 const FooterSection = () => {
   return (
     <Fragment>
-      <div className={styles.footerContainer}> 2023 </div>
+      <div className={styles.footerContainer}>
+        <div className={styles.mediaContainer}>
+          <Link to="https://github.com/firstagon/what-about-coins" target="_blank" className={styles.link}>
+            GIT
+          </Link>
+        </div>
+      </div>
     </Fragment>
   );
 };

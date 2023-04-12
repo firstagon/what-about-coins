@@ -19,6 +19,7 @@
 header {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   position: sticky;
 
   top: 0;
@@ -27,6 +28,15 @@ header {
   min-height: 5vh;
 
   background-color: var(--darkblue);
+
+  z-index: 1;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .nav {
@@ -34,7 +44,12 @@ header {
   justify-content: center;
   align-items: center;
 
-  color: white;
+  font-size: medium;
+
+  margin-right: 2vw;
+
+
+  /* color: white; */
 }
 
 .link {
@@ -47,7 +62,7 @@ header {
 }
 
 .link:hover {
-  color: var(--yellow)
+  color: var(--yellow);
 }
 
 .link:first-child {
@@ -55,13 +70,14 @@ header {
 }
 
 .active {
-  font-size: large;
+  font-size: larger;
   color: var(--yellow);
 }
 
 .main {
   display: flex;
   justify-content: center;
+
   height: auto;
 
   color: white;
@@ -74,6 +90,8 @@ footer {
   display: flex;
   align-self: flex-end;
 
+  width: 100%;
+
   color: white;
   background-color: var(--darkblue);
 }
@@ -84,4 +102,31 @@ footer {
 
 .blackHeader {
   background-color: black;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: justify;
+  text-align: justify;
+
+  margin-left: 2vw;
+
+  font-family: "Nabla";
+  /* font-size: 3em; */
+
+  user-select: none;
+  
+}
+
+.logoW {
+  font-size: 3rem;
+}
+
+.logoA {
+  font-size: 2rem;
+}
+
+.logoC {
+  font-size: 1.3rem;
 }

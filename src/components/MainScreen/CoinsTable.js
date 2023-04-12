@@ -10,7 +10,7 @@ import TableRow from "./TableRow";
 // })();
 
 const CoinsTable = (props) => {
-  console.log(props);
+  // console.log(props);
 
   const [coins, setCoins] = useState(props.coins);
 

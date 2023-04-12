@@ -31,11 +31,19 @@ const Layout = () => {
   return (
     <React.Fragment>
       <header>
-        <nav className={styles.nav}>
-          <NavLink to="/" className={activeLink}> Home </NavLink>
-          <NavLink to="/posts" className={activeLink}> Posts </NavLink>
-          <NavLink to="/about" className={activeLink}> About </NavLink>
-        </nav>
+        <div className={styles.headerContainer}>
+          <div className={styles.logoContainer}>
+            <div className={styles.logoW}>w</div>
+            <div className={styles.logoA}>a</div>
+            <div className={styles.logoC}>c</div>
+
+          </div>
+          <nav className={styles.nav}>
+            <NavLink to="/" className={activeLink}> Home </NavLink>
+            <NavLink to="/posts" className={activeLink}> Posts </NavLink>
+            <NavLink to="/about" className={activeLink}> About </NavLink>
+          </nav>
+        </div>
       </header>
       <section className={styles.main}>
         <Outlet />

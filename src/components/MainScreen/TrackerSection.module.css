@@ -1,8 +1,30 @@
 .trackSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    margin: 2vw 0 2vw 0;
+  margin: 2vw 0 2vw 0;
+}
+
+.load {
+  position: absolute;
+
+  top: 40%;
+
+  animation: spinnner 1s infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(180);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
 }

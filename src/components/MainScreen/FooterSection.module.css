@@ -8,7 +8,7 @@
   width: 100%;
   height: 5vh;
 
-  background-color: #191c1f;
+  background-color: black;
 }
 
 .mediaContainer {
@@ -30,4 +30,10 @@
 
 .link:hover {
   color: var(--orange);
+}
+
+.gitLogo {
+  -webkit-background-clip: border-box;
+  background-clip: content-box;
+  background-image: red;
 }

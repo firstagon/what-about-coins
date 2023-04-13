@@ -2,11 +2,18 @@ import styles from "./TrackerSection.module.css";
 import CoinsTable from "./CoinsTable";
 import { fetchCoin } from "../../libs/getCoins";
 import getRUB from "../../libs/exchangeRates";
-import { useEffect, useState, memo } from "react";
+import { useEffect, useState } from "react";
+
+const loadSpin = () => {
+  return (
+    <div className={styles.load}> LOADING </div>
+  )
+}
 
 const TrackerSection = () => {
   const [coinsValues, setCoinsValues] = useState([]);
   const [rubVal, setRubVal] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // console.log("use effect");
@@ -17,8 +24,10 @@ const TrackerSection = () => {
           arrayOfCoins.forEach((coin) => {
             setCoinsValues((prevState) => {
               if (prevState.length === 0) {
+                setIsLoading(false);
                 return [{ name: coin.name, priceUSD: coin.priceUsd, rating: coin.rank }];
               } else {
+                setIsLoading(false);
                 return [...prevState, { name: coin.name, priceUSD: coin.priceUsd, rating: coin.rank }];
               }
             });
@@ -37,6 +46,7 @@ const TrackerSection = () => {
     <section className={styles.trackSection}>
       <CoinsTable coins={coinsValues} rub={rubVal} />
       {/* <marquee direction="right"> moving text </marquee> */}
+      {isLoading &&  loadSpin()}
     </section>
   );
 };

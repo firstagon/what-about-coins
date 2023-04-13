@@ -37,7 +37,7 @@
 
   height: 5em;
 
-  animation:move 2s infinite;
+  animation: move 2s infinite;
 }
 
 @media (max-width: 500px) {

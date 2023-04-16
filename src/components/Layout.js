@@ -62,7 +62,7 @@ const Layout = () => {
       <section className={styles.main}>
         <Outlet />
       </section>
-      <footer>
+      <footer className={styles.footer}>
         <FooterSection />
       </footer>
     </React.Fragment>

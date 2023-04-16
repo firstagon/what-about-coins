@@ -23,7 +23,7 @@ const Layout = () => {
         left: 0,
         behavior: "instant",
       });
-    } else if (pathname === "/") {
+    } else if (pathname === "/" || pathname === '/about') {
       root.scrollTo({
         top: 0,
         left: 0,

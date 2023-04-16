@@ -1,12 +1,12 @@
-.mainContainer {
+.infoContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
 
-  max-width: 1200px;
+  width: 80%;
 
-  margin-bottom: 2vw;
+  padding: 0;
+  margin-top: 2vw;
 }
 
 .infoSection {
@@ -14,10 +14,12 @@
   flex-direction: row;
   justify-content: space-between;
 
-  width: 80%;
+  height: 18vh;
+  width: 100%;
 
-  margin: 0;
   padding: 0;
+
+  margin-bottom: 2vw;
 }
 
 .infoBlock {
@@ -26,35 +28,44 @@
   justify-content: flex-start;
   align-items: center;
 
-  width: 48%;
+  width: 160px;
 
   /* background-color: var(--darkblue); */
 
-  border: 1px solid hsla(0,0%,51%,.25);
-  border-radius: 1em;
+  /* border: 1px solid hsla(0, 0%, 51%, 0.25); */
+  /* border-radius: 1em; */
+
+  margin: 0 24px 0 24px;
+}
+
+.infoBlock:first-child {
+  margin-left: 0;
+}
+
+.infoBlock:last-child {
+  margin-right: 0;
 }
 
 .textRegular,
 .textHeader {
+  display: flex;
   text-align: center;
+  justify-content: flex-start;
 
-  font-size: larger;
+  font-size: large;
 
-  margin: 0;
-  padding-top: 8px;
-}
-
-.textRegular {
   padding: 8px;
+  margin: 0;
 }
 
 @media (max-width: 500px) {
-  .infoSection{
+  .infoSection {
     flex-direction: column;
   }
 
   .infoBlock {
     width: 100%;
+    height: 1vh;
     margin-bottom: 5vw;
   }
 
@@ -71,7 +82,7 @@
   text-align: center;
   text-decoration: none;
 
-  color: var(--blue);
+  color: var(--yellow);
 
   margin: 0;
   padding: 0;
@@ -106,4 +117,35 @@
 
 p {
   margin: 0;
+}
+
+.reactLogo {
+  color: rgb(20 158 202);
+
+  width: 80px;
+  height: 90px;
+
+  padding: 8px;
+
+  user-select: none;
+}
+
+.imgLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 90px;
+
+  padding: 8px;
+
+  user-select: none;
+}
+
+.imgLogoRouter {
+  width: 80px;
+
+  padding: 8px;
+
+  user-select: none;
 }

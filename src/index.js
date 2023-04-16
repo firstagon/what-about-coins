@@ -10,6 +10,12 @@ import "./index.css";
 const container = document.getElementById("root");
 const root = createRoot(container);
 
+container.onscroll = (e) => {
+  // console.log(e.currentTarget.scrollTop)
+}
+
+
+
 root.render(
   // <React.StrictMode>
     <Provider store={store}>

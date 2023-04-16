@@ -1,32 +1,36 @@
-import React, { useRef } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import React from "react";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import styles from "./Layout.module.css";
-import FooterSection from '../components/MainScreen/FooterSection';
+import FooterSection from "../components/MainScreen/FooterSection";
 
 // let headerStyle;
 
-
-const activeLink = ({isActive}) => isActive ? styles.active + ' ' + styles.link : styles.link;
-
+const activeLink = ({ isActive }) => (isActive ? styles.active + " " + styles.link : styles.link);
 
 const Layout = () => {
-  // https://medium.com/strise/making-use-of-observers-in-react-a29b1fd05fa7
-  // const head = useRef();
+  const { pathname } = useLocation();
 
-  // const options = {
-  //   root: document.getElementById('root'),
-  //   rootMargin: '0px',
-  //   threshold: 1.0,
-  // };
 
-  // const cb = function(entries, observer) {
-  //   return headerStyle = styles.blackHeader;
-  // };
+  // console.log(info.offsetHeight);
+  // console.log(info.offsetHeight);
 
-  // const observer = new IntersectionObserver(cb, options);
-  // const target = head.current;
-  // console.log(target)
-  // observer.observe(target);
+  const scrollHandler = () => {
+    const info = document.getElementById('info');
+    const root = document.getElementById("root");
+    if (pathname === "/posts") {
+      root.scrollTo({
+        top: info ? info.offsetHeight + 300 : 300,
+        left: 0,
+        behavior: "instant",
+      });
+    } else if (pathname === "/") {
+      root.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+    }
+  };
 
   return (
     <React.Fragment>
@@ -36,19 +40,31 @@ const Layout = () => {
             <div className={styles.logoW}>w</div>
             <div className={styles.logoA}>a</div>
             <div className={styles.logoC}>c</div>
-
           </div>
           <nav className={styles.nav}>
-            <NavLink to="/" className={activeLink}> Home </NavLink>
-            <NavLink to="/posts" className={activeLink}> Posts </NavLink>
-            <NavLink to="/about" className={activeLink}> About </NavLink>
+            <NavLink to="/" className={activeLink} onClick={scrollHandler}>
+              Home
+            </NavLink>
+            <NavLink
+              to="/posts"
+              preventScrollReset={true}
+              className={activeLink}
+              onClick={scrollHandler()}
+            >
+              Posts
+            </NavLink>
+            <NavLink to="/about" className={activeLink}>
+              About
+            </NavLink>
           </nav>
         </div>
       </header>
       <section className={styles.main}>
         <Outlet />
       </section>
-      <footer> <FooterSection /> </footer>
+      <footer>
+        <FooterSection />
+      </footer>
     </React.Fragment>
   );
 };

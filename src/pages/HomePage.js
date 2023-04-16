@@ -4,7 +4,8 @@ import WelcomeBlock from "../components/MainScreen/WelcomeBlock";
 import InfoMain from "../components/MainScreen/InfoMain";
 import HowWorks from "../components/MainScreen/HowWorks";
 
-const HomePage = (props) => {
+const HomePage = () => {
+
   return (
     <section className={styles.main}>
       <WelcomeBlock />

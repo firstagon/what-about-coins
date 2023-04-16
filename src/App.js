@@ -10,7 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />}></Route>
-            <Route path="posts" element={<div>POSTS PAGE</div>}></Route>
+            <Route path="posts" element={<HomePage />}></Route>
             <Route path="about" element={<div>ABOUT PAGE</div>}></Route>
             <Route path="*" element={<div>404</div>}></Route>
           </Route>

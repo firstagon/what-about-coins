@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const InfoMain = () => {
   return (
     <Fragment>
-      <section className={styles.mainContainer}>
+      <section id="info" className={styles.mainContainer}>
         <h6 className={styles.blockName}> Used API </h6>
         <div className={styles.infoSection}>
           <div className={styles.infoBlock}>

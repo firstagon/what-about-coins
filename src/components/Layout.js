@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import styles from "./Layout.module.css";
 import FooterSection from "../components/MainScreen/FooterSection";
@@ -10,22 +10,48 @@ const activeLink = ({ isActive }) => (isActive ? styles.active + " " + styles.li
 const Layout = () => {
   const { pathname } = useLocation();
 
+  const info = document.getElementById("info");
+  const about = document.getElementById("about");
+  const root = document.getElementById("root");
 
-  // console.log(info.offsetHeight);
-  // console.log(info.offsetHeight);
-
-  const scrollHandler = () => {
-    const info = document.getElementById('info');
-    const root = document.getElementById("root");
+  useEffect(() => {
     if (pathname === "/posts") {
       root.scrollTo({
-        top: info ? info.offsetHeight + 300 : 300,
+        top: info ? info.offsetTop : 500,
         left: 0,
         behavior: "instant",
       });
-    } else if (pathname === "/" || pathname === '/about') {
+    } else if (pathname === "/") {
       root.scrollTo({
         top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+    } else if (pathname === "/about") {
+      root.scrollTo({
+        top: about ? about.offsetTop : 600,
+        left: 0,
+        behavior: "instant",
+      });
+    }
+  }, [pathname, info, about, root]);
+
+  const scrollTop = () => {
+    if (pathname === "/posts") {
+      root.scrollTo({
+        top: info ? info.offsetTop : 500,
+        left: 0,
+        behavior: "instant",
+      });
+    } else if (pathname === "/") {
+      root.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+    } else if (pathname === "/about") {
+      root.scrollTo({
+        top: about ? about.offsetTop : 600,
         left: 0,
         behavior: "instant",
       });
@@ -42,18 +68,13 @@ const Layout = () => {
             <div className={styles.logoC}>c</div>
           </div>
           <nav className={styles.nav}>
-            <NavLink to="/" className={activeLink} onClick={scrollHandler}>
+            <NavLink to="/" className={activeLink} onClick={scrollTop}>
               Home
             </NavLink>
-            <NavLink
-              to="/posts"
-              preventScrollReset={true}
-              className={activeLink}
-              onClick={scrollHandler()}
-            >
+            <NavLink to="/posts" preventScrollReset={true} className={activeLink} onClick={scrollTop}>
               Posts
             </NavLink>
-            <NavLink to="/about" className={activeLink}>
+            <NavLink to="/about" className={activeLink} onClick={scrollTop}>
               About
             </NavLink>
           </nav>

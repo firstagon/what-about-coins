@@ -7,8 +7,8 @@ import routerLogo from "../../img/react-router.png";
 const AboutBox = () => {
   return (
     <Fragment>
-      <p className={styles.textArea}> Used </p>
-      <div className={styles.infoContainer}>
+      <h6 className={styles.textArea}> Used tech</h6>
+      <div id='about' className={styles.infoContainer}>
         <div className={styles.infoSection}>
           <div className={styles.infoBlock}>
             <img src={htmlLogo} alt="html" className={styles.imgLogo}></img>

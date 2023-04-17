@@ -156,3 +156,12 @@ p {
 
   user-select: none;
 }
+
+.textArea {
+  margin: 2vw 0 2vw 0;
+  
+  font-size: 4rem;
+  font-weight: 400;
+
+  color: var(--yellow);
+}

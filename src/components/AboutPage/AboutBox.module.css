@@ -14,10 +14,10 @@
 .infoSection {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 
   /* height: 18vh; */
-  width: 100%;
+  width: 80%;
 
   padding: 0;
 

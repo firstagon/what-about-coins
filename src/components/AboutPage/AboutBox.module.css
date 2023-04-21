@@ -60,28 +60,6 @@
   margin: 0;
 }
 
-@media (max-width: 500px) {
-  .infoSection {
-    flex-direction: column;
-    align-items: center;
-
-  
-    margin: 0;
-    padding: 0;
-  }
-
-  .infoBlock {
-    width: 100%;
-    /* height: 1vh; */
-    margin: 0 0 5vw 0;
-  }
-
-  .textRegular,
-  .textHeader {
-    font-size: 1rem;
-  }
-}
-
 .textLink {
   display: inline-flex;
   justify-content: center;
@@ -158,10 +136,43 @@ p {
 }
 
 .textArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin: 2vw 0 2vw 0;
-  
+
   font-size: 4rem;
   font-weight: 400;
 
-  color: var(--yellow);
+  /* color: var(--yellow); */
+}
+
+p {
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .infoSection {
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .infoBlock {
+    width: 100%;
+    /* height: 1vh; */
+    margin: 0 0 5vw 0;
+  }
+
+  .textRegular,
+  .textHeader {
+    font-size: 1rem;
+  }
+
+  .textArea {
+    font-size: 3em;
+  }
 }

@@ -6,7 +6,7 @@ const InfoMain = () => {
   return (
     <Fragment>
       <section id="info" className={styles.mainContainer}>
-        <h6 className={styles.blockName}> Used API </h6>
+        <h6 className={styles.blockName}> Used <span className={styles.textDecorator}> API </span> </h6>
         <div className={styles.infoSection}>
           <div className={styles.infoBlock}>
             <h4 className={styles.textHeader}> Откуда данные? </h4>

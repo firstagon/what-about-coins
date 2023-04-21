@@ -39,7 +39,7 @@ const Layout = () => {
   const scrollTop = () => {
     if (pathname === "/posts") {
       root.scrollTo({
-        top: info ? info.offsetTop : 500,
+        top: info ? info.offsetTop - 50 : 500,
         left: 0,
         behavior: "instant",
       });
@@ -51,7 +51,7 @@ const Layout = () => {
       });
     } else if (pathname === "/about") {
       root.scrollTo({
-        top: about ? about.offsetTop : 600,
+        top: about ? about.offsetTop - 50 : 600,
         left: 0,
         behavior: "instant",
       });

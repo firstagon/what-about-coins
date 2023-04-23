@@ -13,10 +13,11 @@ const loadSpin = () => {
 const TrackerSection = () => {
   const [coinsValues, setCoinsValues] = useState([]);
   const [rubVal, setRubVal] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(null);
 
   useEffect(() => {
     // console.log("use effect");
+    setIsLoading(true);
     let arrayOfCoins = [];
     fetchCoin().then((coins) => {
       for (let i = 0; i <= 10; i++) {
@@ -38,14 +39,11 @@ const TrackerSection = () => {
       }
     });
     getRUB().then((res) => setRubVal(res));
-
-    return (() => arrayOfCoins.length = 0);
   }, []);
-
+  
   return (
     <section className={styles.trackSection}>
       <CoinsTable coins={coinsValues} rub={rubVal} />
-      {/* <marquee direction="right"> moving text </marquee> */}
       {isLoading &&  loadSpin()}
     </section>
   );

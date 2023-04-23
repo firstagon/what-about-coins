@@ -1,7 +1,5 @@
-import { Fragment, useMemo, useEffect, useState, memo } from "react";
+import { Fragment, useEffect, useState, memo } from "react";
 import styles from "./CoinsTable.module.css";
-import getRUB from "../../libs/exchangeRates";
-import { getCoin } from "../../libs/getCoins";
 import TableRow from "./TableRow";
 
 // (async () => {
